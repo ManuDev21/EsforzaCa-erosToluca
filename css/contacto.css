@@ -1,0 +1,116 @@
+:root {
+  --primary: #00509e;
+  --secondary: #84ff00;
+  --bg-light: #f5f5f5;
+  --text-dark: #333;
+  --card-shadow: rgba(0, 0, 0, 0.15);
+  --navbar: rgb(95, 167, 81);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  background-color: var(--navbar);
+  animation: slideDown 1.2s ease-out;
+  padding: 1rem 2rem;
+}
+.logo {
+  width: 50px;
+  height: auto;
+}
+
+  @keyframes slideDown {
+    from { transform: translateY(-100%); opacity: 0; }
+    to   { transform: translateY(0);     opacity: 1; }
+  }
+  
+  /* Formulario */
+  section.py-5 {
+    background-color: var(--bg-form);
+    animation: fadeIn 1s ease-in;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to   { opacity: 1; transform: scale(1); }
+  }
+  
+  #form .form-control {
+    border: 2px solid var(--primary);
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  #form .form-control:focus {
+    border-color: var(--secondary);
+    box-shadow: 0 0 8px rgba(255, 69, 0, 0.5);
+  }
+  
+  /* Botón */
+  #form #button {
+    background-color: var(--primary);
+    border: none;
+    transition: background-color 0.3s, transform 0.2s;
+    width: 100px;
+    height: 50px;
+    border-radius: 20px;
+    color: white;
+  }
+  #form #button:hover {
+    background-color: var(--secondary);
+    transform: scale(1.05);
+  }
+  
+  /* Footer */
+  footer {
+    background-color: var(--primary);
+    color: #fff;
+    animation: fadeInUp 0.8s ease-out;
+  }
+  @keyframes fadeInUp {
+    from { transform: translateY(40px); opacity: 0; }
+    to   { transform: translateY(0);     opacity: 1; }
+  }
+  footer h5 {
+    color: var(--secondary);
+  }
+  
+  #subT{
+
+    animation: slideDown 1.2s ease-out;
+    text-shadow: -3px -3px 10px green,
+                    3px 3px 10px green;              
+    font-size: 55px;
+  }
+  
+  #textoCartas{
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-size: 25px;
+  }
+  
+  #textoCartas1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+  }
+  
+  #cardTitle{
+    text-shadow: 0px 0px 1px black;
+  }
+  
+  #titulo{
+    font-family: Corben;
+    font-weight: bold;
+  }
+  
+  #links {
+    font-family: Cooper Black;
+    font-size: 1.2rem;
+    margin-left: 1rem;
+  }
+  #links:hover {
+    text-decoration: underline;
+    transform: translateY(-3px);
+    transition: 0.3s;
+  }

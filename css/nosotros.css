@@ -1,0 +1,111 @@
+:root {
+    --primary: #006400;
+    --secondary: #ff8c00;
+    --bg-section: #fafafa;
+    --text-dark: #222;
+    --card-shadow: rgba(0, 0, 0, 0.1);
+    --navbar: rgb(95, 167, 81);
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Navbar (igual animación) */
+  .navbar {
+    animation: slideDown 1.2s ease-out;
+    background-color: var(--navbar);
+    padding: 1rem 2rem;
+  }
+
+  .logo {
+    width: 50px;
+    height: auto;
+  }
+
+  @keyframes slideDown {
+    from { transform: translateY(-100%); opacity: 0; }
+    to   { transform: translateY(0);     opacity: 1; }
+  }
+  
+  /* Sección “Quiénes Somos” */
+  section.py-5 {
+    background-color: var(--bg-section);
+    animation: fadeIn 1s ease-in;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Cards de misión, visión, valores */
+  .card {
+    border: 1px solid black;
+    border-radius: 0.75rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 10px 5px var(--card-shadow);
+  }
+  .card-img-top {
+    transition: filter 0.5s;
+  }
+  .card:hover .card-img-top {
+    filter: brightness(0.9);
+  }
+  
+  /* Footer */
+  footer {
+    background-color: var(--primary);
+    color: #fff;
+    animation: fadeInUp 0.8s ease-out;
+  }
+  @keyframes fadeInUp {
+    from { transform: translateY(40px); opacity: 0; }
+    to   { transform: translateY(0);     opacity: 1; }
+  }
+  footer h5 {
+    color: var(--secondary);
+  }
+
+  #subT{
+
+    animation: slideDown 1.2s ease-out;
+    text-shadow: -3px -3px 10px green,
+                    3px 3px 10px green;              
+    font-size: 55px;
+  }
+  
+  #textoCartas{
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-size: 25px;
+  }
+
+  #textoCartas1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+  }
+  
+  #cardTitle{
+    text-shadow: 0px 0px 1px black;
+  }
+  
+  #titulo{
+    font-family: Corben;
+    font-weight: bold;
+  }
+  
+  #links {
+    font-family: Cooper Black;
+    font-size: 1.2rem;
+    margin-left: 1rem;
+  }
+  #links:hover {
+    text-decoration: underline;
+    transform: translateY(-3px);
+    transition: 0.3s;
+  }

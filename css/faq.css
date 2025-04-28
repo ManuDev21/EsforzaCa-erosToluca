@@ -1,0 +1,124 @@
+:root {
+  --primary: #00509e;
+  --secondary: #ffd700;
+  --bg-light: #f5f5f5;
+  --text-dark: #333;
+  --card-shadow: rgba(0, 0, 0, 0.15);
+  --navbar: rgb(95, 167, 81);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  background-color: var(--navbar);
+  animation: slideDown 1.2s ease-out;
+  padding: 1rem 2rem;
+}
+.logo {
+  width: 50px;
+  height: auto;
+}
+
+  @keyframes slideDown {
+    from { transform: translateY(-100%); opacity: 0; }
+    to   { transform: translateY(0);     opacity: 1; }
+  }
+  
+  /* FAQ Accordion */
+  .accordion-button {
+    background-color: var(--bg-faq);
+    color: var(--primary);
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .accordion-button:not(.collapsed):hover {
+    background-color: var(--navbar);
+    color: #fff;
+  }
+  .accordion-button::after {
+    transition: transform 0.3s;
+  }
+  .accordion-button:not(.collapsed)::after {
+    transform: rotate(180deg);
+  }
+  
+  /* Animación de entrada de cada ítem */
+  .accordion-item {
+    animation: fadeInUp 0.5s ease forwards;
+    opacity: 0;
+  }
+  .accordion-item:nth-child(1) { animation-delay: 0.2s; }
+  .accordion-item:nth-child(2) { animation-delay: 0.4s; }
+  /* Añade más delays si agregas más preguntas */
+  @keyframes fadeInUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to   { transform: translateY(0);     opacity: 1; }
+  }
+  
+  /* Footer */
+  footer {
+    background-color: var(--primary);
+    color: #eee;
+    animation: fadeInUp 0.8s ease-out;
+  }
+  @keyframes fadeInUp {
+    from { transform: translateY(40px); opacity: 0; }
+    to   { transform: translateY(0);     opacity: 1; }
+  }
+  footer h5 {
+    color: var(--secondary);
+  }
+  
+.accordion-item:nth-child(1) { animation-delay: 0.2s; }
+.accordion-item:nth-child(2) { animation-delay: 0.4s; }
+.accordion-item:nth-child(3) { animation-delay: 0.6s; }
+.accordion-item:nth-child(4) { animation-delay: 0.8s; }
+.accordion-item:nth-child(5) { animation-delay: 1s; }
+.accordion-item:nth-child(6) { animation-delay: 1.2s; }
+.accordion-item:nth-child(7) { animation-delay: 1.4s; }
+.accordion-item:nth-child(8) { animation-delay: 1.6s; }
+.accordion-item:nth-child(9) { animation-delay: 1.8s; }
+.accordion-item:nth-child(10) { animation-delay: 2s; }
+
+#subT{
+
+  animation: slideDown 1.2s ease-out;
+  text-shadow: -3px -3px 10px green,
+                  3px 3px 10px green;              
+  font-size: 55px;
+}
+
+#textoCartas{
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-size: 25px;
+}
+
+#textoCartas1{
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+}
+
+#cardTitle{
+  text-shadow: 0px 0px 1px black;
+}
+
+#titulo{
+  font-family: Corben;
+  font-weight: bold;
+}
+
+#links {
+  font-family: Cooper Black;
+  font-size: 1.2rem;
+  margin-left: 1rem;
+}
+#links:hover {
+  text-decoration: underline;
+  transform: translateY(-3px);
+  transition: 0.3s;
+}
