@@ -30,7 +30,7 @@
 
 .hero-section {
   position: relative;
-  background: url('../img/hero2.png') center center/cover no-repeat;
+  background: url('../hero2.png') center center/cover no-repeat;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
