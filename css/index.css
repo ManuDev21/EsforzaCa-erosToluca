@@ -316,3 +316,7 @@ footer h5 {
   transform: translateY(-3px);
   transition: 0.3s;
 }
+#cartaP:hover{
+  transform: rotateY(360deg) translateY(-20px);
+  transition: 1.5s;
+}
