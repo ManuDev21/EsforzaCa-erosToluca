@@ -1,0 +1,205 @@
+/* =================================
+   PALETA DE COLORES Y FUENTES
+   ================================= */
+:root {
+  --bg-dark: #1a1a2e;
+  --bg-medium: #1f1f38;
+  --primary: #00ff7f;
+  --secondary: #00a8ff;
+  --text-light: #f4f4f4;
+  --text-muted: #a9a9b3;
+  --card-bg: #2a2a4a;
+  --border-color: rgba(255, 255, 255, 0.1);
+  --font-family: 'Poppins', sans-serif;
+}
+
+/* =================================
+   ESTILOS GLOBALES
+   ================================= */
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  font-family: var(--font-family);
+}
+
+.section-title {
+  color: var(--primary);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* =================================
+   COMPONENTES REUTILIZABLES
+   ================================= */
+/* --- Navbar --- */
+.navbar {
+  transition: background-color 0.4s ease, padding 0.4s ease;
+  padding: 1.5rem 1rem;
+  background-color: transparent;
+  font-family: var(--font-family);
+}
+.navbar.scrolled {
+  background-color: rgba(26, 26, 46, 0.9);
+  padding: 0.8rem 1rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+.navbar .navbar-brand { font-weight: 700; font-size: 1.5rem; color: #fff; }
+.navbar .logo { width: 45px; height: auto; transition: transform 0.3s ease; }
+.navbar .navbar-brand:hover .logo { transform: rotate(360deg); }
+.navbar .nav-link { color: var(--text-muted); font-weight: 500; margin: 0 0.5rem; transition: color 0.3s ease; }
+.navbar .nav-link:hover, .navbar .nav-link.active { color: var(--primary); }
+
+/* --- Page Header (para Nosotros, FAQ, Contacto) --- */
+.page-header {
+  background: linear-gradient(rgba(26,26,46,0.7), rgba(26,26,46,0.7)), url('../hero2.png') center center/cover no-repeat;
+  padding: 10rem 0 5rem 0;
+  margin-top: -90px; /* Ajuste para el navbar fijo */
+}
+.page-header h1 { color: #fff; font-size: 3rem; font-weight: 700; }
+
+/* --- Hero Section (para Index) --- */
+.hero-section {
+  position: relative;
+  background: url('../hero2.png') center center/cover no-repeat;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-section .overlay { position: absolute; top:0; left:0; width:100%; height:100%; background: linear-gradient(0deg, rgba(26,26,46,0.9) 0%, rgba(26,26,46,0.4) 100%); z-index:1; }
+.hero-section .container { z-index: 2; }
+#typed-hero { color: var(--primary); font-weight: 600; }
+
+/* --- Cards --- */
+.info-card, .media-card, .testimonial-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.info-card:hover, .media-card:hover, .testimonial-card:hover { transform: translateY(-10px); box-shadow: 0 10px 30px rgba(0, 255, 127, 0.1); }
+.card-img-top, .card video { width: 100%; height: 250px; object-fit: cover; }
+.info-card .card-title, .media-card .card-title { color: var(--primary); font-weight: 700; }
+.card-text, .more-info p { color: var(--text-muted); }
+.more-info { display: none; }
+.testimonial-card { padding: 2rem; border-left: 5px solid var(--primary); }
+.testimonial-card p { font-style: italic; }
+.testimonial-card h5 { color: var(--primary); }
+
+/* --- Accordion (para FAQ) --- */
+.accordion-item { background-color: var(--card-bg); border: 1px solid var(--border-color); margin-bottom: 1rem; border-radius: .75rem !important;}
+.accordion-button { background-color: var(--card-bg); color: var(--text-light); font-weight: 600; }
+.accordion-button:not(.collapsed) { background-color: var(--bg-medium); color: var(--primary); }
+.accordion-button:focus { box-shadow: 0 0 0 0.25rem rgba(0, 255, 127, 0.25); }
+.accordion-body { color: var(--text-muted); }
+.accordion-button::after { filter: invert(1) grayscale(100) brightness(200%); }
+
+/* --- Form (para Contacto) --- */
+#contact-form .form-label { color: var(--text-muted); }
+#contact-form .form-control { background-color: var(--card-bg); color: var(--text-light); border: 1px solid var(--border-color); padding: 0.75rem 1rem; }
+#contact-form .form-control:focus { background-color: var(--card-bg); color: var(--text-light); border-color: var(--primary); box-shadow: 0 0 8px rgba(0, 255, 127, 0.3); }
+
+/* --- Botones --- */
+.btn-primary { background-color: var(--primary); border-color: var(--primary); color: var(--bg-dark); font-weight: 600; transition: all 0.3s ease; }
+.btn-primary:hover { background-color: #00e670; border-color: #00e670; transform: scale(1.05); }
+.btn-outline-primary { color: var(--primary); border-color: var(--primary); font-weight: 600; transition: all 0.3s ease; }
+.btn-outline-primary:hover { background-color: var(--primary); color: var(--bg-dark); }
+
+/* --- Footer --- */
+footer { background-color: var(--bg-medium); color: var(--text-light); }
+.btn-social { width: 45px; height: 45px; border-radius: 50%; margin-right: 10px; display: inline-flex; align-items: center; justify-content: center; font-size: 1.2rem; transition: all 0.3s ease; border: none; }
+.btn-facebook { background-color: #1877F2; color: #fff; }
+.btn-instagram { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); color: #fff; }
+.btn-tiktok { background-color: #000; color: #fff; border: 2px solid #fff; }
+.btn-social:hover { transform: translateY(-5px); box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+footer hr { opacity: 0.2; }
+
+/* =================================
+   PALETA DE COLORES Y FUENTES
+   ================================= */
+:root {
+  --bg-dark: #1a1a2e;
+  --bg-medium: #1f1f38;
+  --primary: #00ff7f;
+  --secondary: #00a8ff;
+  --gold: #ffd700;
+  --text-light: #f4f4f4;
+  --text-muted: #a9a9b3;
+  --card-bg: #2a2a4a;
+  --border-color: rgba(255, 255, 255, 0.1);
+  --font-family: 'Poppins', sans-serif;
+}
+
+/* ... (Todos los estilos anteriores de style.css permanecen aquí) ... */
+
+/* =================================
+   NUEVO: SECCIÓN DE CAMPEONATO
+   ================================= */
+#animated-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+/* Estilo para cada letra (span) del título animado */
+#animated-title span {
+  display: inline-block;
+  opacity: 0;
+  animation: bounceIn 0.6s forwards;
+  color: var(--gold); /* Color dorado para el título */
+  text-shadow: 0 0 5px var(--gold), 0 0 15px rgba(255,215,0,0.5);
+}
+
+@keyframes bounceIn {
+  0% { transform: scale(0.5); opacity: 0; }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.champion-card {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  aspect-ratio: 1 / 1; /* Para que las tarjetas sean cuadradas */
+  transition: transform 0.3s ease;
+}
+.champion-card:hover {
+  transform: scale(1.08);
+}
+.champion-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.champion-card .champion-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 50%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.champion-card:hover .champion-overlay {
+  opacity: 1;
+}
+.champion-card .champion-overlay span {
+  color: var(--gold);
+  font-size: 2rem;
+  font-weight: bold;
+  transform: translateY(-10px);
+  text-shadow: 0 0 10px #000;
+}
