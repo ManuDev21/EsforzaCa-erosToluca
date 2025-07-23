@@ -203,3 +203,83 @@ footer hr { opacity: 0.2; }
   transform: translateY(-10px);
   text-shadow: 0 0 10px #000;
 }
+
+/* ... (Todos los estilos anteriores de style.css permanecen aquí) ... */
+
+/* =================================
+   NUEVO: PÁGINA DE PROMOCIONES
+   ================================= */
+
+/* Estilo para el enlace especial de promociones en la navbar */
+.navbar .nav-link.promo-link {
+  color: var(--gold);
+  font-weight: 600;
+  border: 1px solid var(--gold);
+  border-radius: 20px;
+  padding: 0.3rem 1rem !important;
+  transition: all 0.3s ease;
+}
+
+.navbar .nav-link.promo-link:hover, .navbar .nav-link.promo-link.active {
+  background-color: var(--gold);
+  color: var(--bg-dark) !important;
+  box-shadow: 0 0 10px var(--gold);
+}
+
+/* Estilo para los cupones dorados */
+.coupon-card {
+  position: relative;
+  background: linear-gradient(145deg, #e6b800, #ffdb58);
+  color: #333;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.coupon-card:hover {
+  transform: translateY(-10px) rotate(1deg);
+  box-shadow: 0 15px 30px rgba(255, 215, 0, 0.4);
+}
+
+/* Línea punteada para simular el corte */
+.coupon-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 30px;
+  height: 100%;
+  border-left: 3px dashed rgba(255, 255, 255, 0.5);
+}
+
+.coupon-content h3 {
+  font-weight: 700;
+  color: #212529;
+}
+
+.coupon-description {
+  font-size: 0.95rem;
+  min-height: 80px; /* Asegura una altura mínima para la descripción */
+}
+
+.coupon-code {
+  background-color: rgba(255,255,255,0.3);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* Estilos para logos de patrocinadores */
+.sponsor-logo {
+  width: 320px;
+  height: 250px;
+  box-shadow: 0px 0px 15px 3px yellow;
+}
+
+.sponsor-logo:hover {
+  transform: rotateY(360deg) translateY(-10px);
+  transition: 1s;
+}
